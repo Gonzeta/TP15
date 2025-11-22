@@ -1,0 +1,66 @@
+body {
+    background-image: url(Img/Img2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 6vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-self: center;
+
+    position: fixed;
+    top: 5%;
+}
+
+h3 {
+    font-size: 3vh;
+    display: flex;
+    justify-self: center;
+
+    position: fixed;
+    top: 12%;
+}
+
+.infoDiv {
+    display: flex;
+
+    position: fixed;
+    top: 40%;
+}
+
+#info_Hero {
+    font-size: 5vh;
+
+    list-style-type: none;
+}
+
+.contador {
+    font-size: 3vh;
+
+    list-style-type: none;
+}
+
+button {
+    width: 20vh;
+    height: 10vh;
+
+    text-decoration: none;
+    font-size: 3vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+
+    display: flex;
+    justify-self: center;
+
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 20%;
+
+    border-radius: 20px;
+    border: 0px;
+}

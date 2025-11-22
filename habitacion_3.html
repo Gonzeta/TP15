@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sala de Sumas</title>
+<link rel="stylesheet" href="styleHab1.css">
+</head>
+<body class="room">
+
+  <div class="thinkpad">
+    <h1 class="Resuelve">¡Resuelve los problemas!</h1>
+    <div id="problem-container">
+      <p id="problem"></p>
+      <input type="number" id="answer" placeholder="Tu respuesta">
+      <button id="submit">Ok!</button>
+      <p id="feedback"></p>
+    </div>
+    <div id="next-container" style="display:none;">
+      <button id="next-problem">Siguiente</button>
+    </div>
+    <div id="return-lobby" style="display:none;">
+      <a href="index.html" class="arrow">⬅ Volver al Lobby</a>
+    </div>
+  </div>
+
+  <div id="defeat-Rout" style="display:none;">
+    <h1 class="defeat-RoutAnnounce">¡Fallaste!</h1>
+
+    <a href="Index.html" class="defeat-RoutBtn">Reiniciar partida</a>
+  </div>
+
+<script src="script.js"></script>
+<script>
+  startRoom('dividir');
+</script>
+<script src="RoomScripts/room3Script.js"></script>
+</body>
+</html>

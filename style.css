@@ -1,0 +1,131 @@
+/* Reset mínimo */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #111;
+}
+
+/* Área de juego con la imagen de fondo */
+#game-area {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('img/fondo.jpg'); 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+.door-area {
+  position: absolute;
+  border: none;
+  background: transparent; 
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;    
+  justify-content: center;
+  padding-bottom: 6%;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 30;
+  width: 14%;              
+  height: 38%;
+  touch-action: manipulation;
+}
+
+
+.door-left { left: 10%; top: 42%; }
+.door-center { left: 44%; top: 38%;  }
+.door-right { right: 10%; top: 42%; }
+
+/* Afinar segunda puerta con precisión */
+.door2 { top: 34%; } 
+
+/* ------------- Puntaje! -------------- */
+#pointCount {
+  font-family: Arial, Helvetica, sans-serif;
+
+  justify-self: start;
+  align-self: start;
+
+  font-size: 4vh;
+}
+
+/* ---------- FLECHA VISIBLE  ---------- */
+.enter-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55); 
+  color: #fff;
+  font-size: 30px;
+  user-select: none;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* Hover / focus para mejor feedback */
+.door-area:hover .enter-arrow,
+.door-area:focus .enter-arrow {
+  transform: translateY(-8px) scale(1.08);
+  background: rgba(255,255,255,0.95);
+  color: #111;
+}
+
+
+.door-area:focus {
+  outline: none;
+}
+
+/* ---------- Objetos movibles ---------- */
+.movable {
+  position: absolute;
+  width: 120px;
+  max-width: 18vw;
+  user-select: none;
+  touch-action: none; 
+  cursor: grab;
+  z-index: 20;
+  transition: drop-shadow 120ms;
+}
+
+/* posiciones iniciales */
+#plant { left: 28%; top: 56%; }
+#shelf { left: 64%; top: 36%; width: 170px; }
+
+/* Mientras arrastrás */
+.movable.dragging {
+  cursor: grabbing;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.45));
+  transform: translateZ(0);
+}
+
+/* ---------- Estilos páginas internas (volver) ---------- */
+.room-page {
+  min-height: 100vh;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg,#f7f7f7,#e6e6e6);
+  padding: 32px;
+}
+
+.back {
+  display: inline-block;
+  text-decoration: none;
+  background:#222;
+  color:white;
+  padding:10px 18px;
+  border-radius:8px;
+  transition: background .18s;
+}
+.back:hover { background:#444; }
